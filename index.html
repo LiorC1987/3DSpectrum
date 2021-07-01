@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>3DSpectrum Dashboard</title>
+
+
+
+    
+
+    <!-- Bootstrap core CSS -->
+
+<link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+
+  </head>
+  <body>
+    
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">3DSpectrums</a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar-nav">
+    <div class="nav-item text-nowrap">
+      <a class="nav-link px-3" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item dashboard-items">
+            <a class="nav-link active" aria-current="page" href="#">
+              <span data-feather="grid"></span>
+              Dashboard
+            </a>
+          </li>
+          <li class="nav-item dashboard-items">
+            <a class="nav-link" href="#">
+              <span data-feather="airplay"></span>
+              Lunch game
+            </a>
+          </li>
+          <li class="nav-item dashboard-items">
+            <a class="nav-link" href="#">
+              <span data-feather="mail"></span>
+              Messages
+            </a>
+          </li>
+          <li class="nav-item dashboard-items">
+            <a class="nav-link" href="#">
+              <span data-feather="help-circle"></span>
+              Help
+            </a>
+          </li>
+          <li class="nav-item dashboard-items">
+            <a class="nav-link" href="#">
+              <span data-feather="user"></span>
+              Account Setting
+            </a>
+          </li>
+        </ul>
+
+        
+      </div>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <!-- <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"> -->
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-3">
+              <div class="tab tab-users">
+                <div class="users-categories d-flex justify-content-around">
+                  <span><a class="users user-clicked" role="button">USER</a></span>
+                  <span><a class="users" role="button">THERAPIST</a></span>
+                  <span><a class="users" role="button">GUARDIAN</a></span>
+                  <span class="vertical feather-24" data-feather="more-vertical"></span>
+                </div>
+                <hr>
+                <div class="user shown">
+                  <div class="text-center"><img class="user-photo" src="images/boy.jpg" alt=""></div>
+                  <div class="user-info-row d-flex justify-content-evenly">
+                    <div class="user-info-box">
+                      <div class="user-title-top">First Name</div><div class="user-title-bottom">Asif</div>
+                    </div>
+                    <div class="user-info-box">
+                      <div class="user-title-top">Last Name</div><div class="user-title-bottom">Marom</div>
+                    </div>
+                  </div>
+  
+                  <div class="user-info-row d-flex justify-content-evenly">
+                    <div class="user-info-box">
+                      <div class="user-title-top">Address</div><div class="user-title-bottom">Smadar 31</div>
+                    </div>
+                    <div class="user-info-box">
+                      <div class="user-title-top">City</div><div class="user-title-bottom">Herzelia</div>
+                    </div>
+                  </div>
+  
+                      <div class="user-info-row d-flex justify-content-evenly">
+                        <div class="user-info-box">
+                          <div class="user-title-top">Birthday Date</div><div class="user-title-bottom white-background">31/11/2020</div>
+                        </div>
+                        <div class="user-info-box">
+                          <div class="user-title-top">Age</div><div class="user-title-bottom white-background">8.4</div>
+                        </div>
+                      </div>
+  
+                      <div class="user-info-row d-flex justify-content-evenly">
+                        <div class="user-info-box">
+                          <div class="user-title-top">Starting Date</div><div class="user-title-bottom white-background">31/11/2020</div>
+                        </div>
+                        <div class="user-info-box">
+                          <div class="user-title-top">Level</div><div class="user-title-bottom white-background">C2</div>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="therapist">
+                  <div class="text-center"><img class="user-photo" src="images/therapist.jpg" alt=""></div>
+                  <div class="user-info-row d-flex justify-content-evenly">
+                    <div class="user-info-box">
+                      <div class="user-title-top">First Name</div><div class="user-title-bottom">Miriam</div>
+                    </div>
+                    <div class="user-info-box">
+                      <div class="user-title-top">Last Name</div><div class="user-title-bottom">Cohen</div>
+                    </div>
+                  </div>
+  
+                  <div class="user-info-row d-flex justify-content-evenly">
+                    <div class="user-info-box">
+                      <div class="user-title-top">Address</div><div class="user-title-bottom">Hertzl 48</div>
+                    </div>
+                    <div class="user-info-box">
+                      <div class="user-title-top">City</div><div class="user-title-bottom">Tel Aviv</div>
+                    </div>
+                  </div>
+  
+
+                </div>
+
+                <div class="guardian">
+                  <div class="text-center"><img class="user-photo" src="images/guardian.jpg" alt=""></div>
+                  <div class="user-info-row d-flex justify-content-evenly">
+                    <div class="user-info-box">
+                      <div class="user-title-top">First Name</div><div class="user-title-bottom">Moshe</div>
+                    </div>
+                    <div class="user-info-box">
+                      <div class="user-title-top">Last Name</div><div class="user-title-bottom">Marom</div>
+                    </div>
+                  </div>
+  
+                  <div class="user-info-row d-flex justify-content-evenly">
+                    <div class="user-info-box">
+                      <div class="user-title-top">Address</div><div class="user-title-bottom">Smadar 31</div>
+                    </div>
+                    <div class="user-info-box">
+                      <div class="user-title-top">City</div><div class="user-title-bottom">Herzelia</div>
+                    </div>
+                  </div>
+  
+
+                </div>
+
+
+
+                  </div>
+                </div>
+
+            <div class="col-9">
+              <div class="tab tab-reports">
+                
+                <div class="filter-top d-flex justify-content-start align-middle">
+                <button class="btn filter-button"><i class="feather-16 " data-feather="filter"></i> Filter</button>
+                <div class="form-group has-search">
+                  <span class="fa fa-search form-control-feedback"></span>
+                  <input type="text" class="form-control" placeholder="Search" id="reportSearch">
+                </div>
+              </div>
+              <div class="reports-headline d-flex justify-content-between">
+                REPORTS<span class="vertical feather-24" data-feather="more-vertical"></span>
+              </div>
+              <hr>
+              <div class="reports-list">
+                <table class="table" id="reportTable">
+                  <thead>
+                    <tr class="report-title">
+                      <th class="align-middle" scope="col"><input class="report-checkbox" type="checkbox"></th>
+                      <th scope="col"><span>Missions</span></th>
+                      <th scope="col"><span>User Status</span></th>
+                      <th scope="col"><span>Guardian Verification</span></th>
+                      <th scope="col"><span>Accuracy</span></th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="report-box">
+                      <th class="align-middle justify-content-start" scope="row"><div class="report-checked"></div> <input class="report-checkbox" type="checkbox"></th>
+                      <td class="align-middle"><div class="missions-top">Basic hand gestures</div><div class="missions-bottom">Thumbs Down</div></td>
+                      <td class="align-middle"><div class="user-status-top"><i class="fa fa-circle"></i> Unfinished</div><div class="user-status-bottom">Last practice: 27/12/2020</div></td>
+                      <td class="align-middle"><div class="guardian-verification-top"><i class="fa fa-circle"></i> Unverified</div><div class="guardian-verification-bottom">Last login: 11/01/2021</div></td>
+                      <td class="align-middle"><div class="accuracy-top">25%</div><div class="accuracy-bottom">Match</div></td>
+                      <td class="align-middle"><div class="d-flex justify-content-between"><div class="report-view-more">View More</div><span class="vertical feather-24" data-feather="more-vertical"></span></div> </td>
+                    </tr>
+  
+                    <tr class="report-box">
+                      <th class="align-middle justify-content-start" scope="row"><div class="report-checked"></div> <input class="report-checkbox" type="checkbox"></th>
+                      <td class="align-middle"><div class="missions-top">Basic hand gestures</div><div class="missions-bottom">Hello</div></td>
+                      <td class="align-middle"><div class="user-status-top"><i class="fa fa-circle"></i> Completed</div><div class="user-status-bottom">Last practice: 27/12/2020</div></td>
+                      <td class="align-middle"><div class="guardian-verification-top"><i class="fa fa-circle"></i> Verified</div><div class="guardian-verification-bottom">Last login: 11/01/2021</div></td>
+                      <td class="align-middle"><div class="accuracy-top">25%</div><div class="accuracy-bottom">Match</div></td>
+                      <td class="align-middle"><div class="d-flex justify-content-between"><div class="report-view-more">View More</div><span class="vertical feather-24" data-feather="more-vertical"></span></div> </td>
+                    </tr>
+                    <tr class="report-box">
+                      <th class="align-middle justify-content-start" scope="row"><div class="report-checked"></div> <input class="report-checkbox" type="checkbox"></th>
+                      <td class="align-middle"><div class="missions-top">Basic hand gestures</div><div class="missions-bottom">Thumbs Down</div></td>
+                      <td class="align-middle"><div class="user-status-top"><i class="fa fa-circle"></i> Unfinished</div><div class="user-status-bottom">Last practice: 27/12/2020</div></td>
+                      <td class="align-middle"><div class="guardian-verification-top"><i class="fa fa-circle"></i> Unverified</div><div class="guardian-verification-bottom">Last login: 11/01/2021</div></td>
+                      <td class="align-middle"><div class="accuracy-top">25%</div><div class="accuracy-bottom">Match</div></td>
+                      <td class="align-middle"><div class="d-flex justify-content-between"><div class="report-view-more">View More</div><span class="vertical feather-24" data-feather="more-vertical"></span></div> </td>
+                    </tr>
+  
+                    <tr class="report-box">
+                      <th class="align-middle justify-content-start" scope="row"><div class="report-checked"></div> <input class="report-checkbox" type="checkbox"></th>
+                      <td class="align-middle"><div class="missions-top">Basic hand gestures</div><div class="missions-bottom">Hello</div></td>
+                      <td class="align-middle"><div class="user-status-top"><i class="fa fa-circle"></i> Completed</div><div class="user-status-bottom">Last practice: 27/12/2020</div></td>
+                      <td class="align-middle"><div class="guardian-verification-top"><i class="fa fa-circle"></i> Verified</div><div class="guardian-verification-bottom">Last login: 11/01/2021</div></td>
+                      <td class="align-middle"><div class="accuracy-top">25%</div><div class="accuracy-bottom">Match</div></td>
+                      <td class="align-middle"><div class="d-flex justify-content-between"><div class="report-view-more">View More</div><span class="vertical feather-24" data-feather="more-vertical"></span></div> </td>
+                    </tr>
+                    <tr class="report-box">
+                      <th class="align-middle justify-content-start" scope="row"><div class="report-checked"></div> <input class="report-checkbox" type="checkbox"></th>
+                      <td class="align-middle"><div class="missions-top">Basic hand gestures</div><div class="missions-bottom">Thumbs Down</div></td>
+                      <td class="align-middle"><div class="user-status-top"><i class="fa fa-circle"></i> Unfinished</div><div class="user-status-bottom">Last practice: 27/12/2020</div></td>
+                      <td class="align-middle"><div class="guardian-verification-top"><i class="fa fa-circle"></i> Unverified</div><div class="guardian-verification-bottom">Last login: 11/01/2021</div></td>
+                      <td class="align-middle"><div class="accuracy-top">25%</div><div class="accuracy-bottom">Match</div></td>
+                      <td class="align-middle"><div class="d-flex justify-content-between"><div class="report-view-more">View More</div><span class="vertical feather-24" data-feather="more-vertical"></span></div> </td>
+                    </tr>
+  
+                    <tr class="report-box">
+                      <th class="align-middle justify-content-start" scope="row"><div class="report-checked"></div> <input class="report-checkbox" type="checkbox"></th>
+                      <td class="align-middle"><div class="missions-top">Basic hand gestures</div><div class="missions-bottom">Hello</div></td>
+                      <td class="align-middle"><div class="user-status-top"><i class="fa fa-circle"></i> Completed</div><div class="user-status-bottom">Last practice: 27/12/2020</div></td>
+                      <td class="align-middle"><div class="guardian-verification-top"><i class="fa fa-circle"></i> Verified</div><div class="guardian-verification-bottom">Last login: 11/01/2021</div></td>
+                      <td class="align-middle"><div class="accuracy-top">25%</div><div class="accuracy-bottom">Match</div></td>
+                      <td class="align-middle"><div class="d-flex justify-content-between"><div class="report-view-more">View More</div><span class="vertical feather-24" data-feather="more-vertical"></span></div> </td>
+                    </tr>
+                    <tr class="report-box">
+                      <th class="align-middle justify-content-start" scope="row"><div class="report-checked"></div> <input class="report-checkbox" type="checkbox"></th>
+                      <td class="align-middle"><div class="missions-top">Basic hand gestures</div><div class="missions-bottom">Thumbs Down</div></td>
+                      <td class="align-middle"><div class="user-status-top"><i class="fa fa-circle"></i> Unfinished</div><div class="user-status-bottom">Last practice: 27/12/2020</div></td>
+                      <td class="align-middle"><div class="guardian-verification-top"><i class="fa fa-circle"></i> Unverified</div><div class="guardian-verification-bottom">Last login: 11/01/2021</div></td>
+                      <td class="align-middle"><div class="accuracy-top">25%</div><div class="accuracy-bottom">Match</div></td>
+                      <td class="align-middle"><div class="d-flex justify-content-between"><div class="report-view-more">View More</div><span class="vertical feather-24" data-feather="more-vertical"></span></div> </td>
+                    </tr>
+
+                    <tr class="report-box">
+                      <th class="align-middle justify-content-start" scope="row"><div class="report-checked"></div> <input class="report-checkbox" type="checkbox"></th>
+                      <td class="align-middle"><div class="missions-top">Basic hand gestures</div><div class="missions-bottom">Thumbs Down</div></td>
+                      <td class="align-middle"><div class="user-status-top"><i class="fa fa-circle"></i> Unfinished</div><div class="user-status-bottom">Last practice: 27/12/2020</div></td>
+                      <td class="align-middle"><div class="guardian-verification-top"><i class="fa fa-circle"></i> Unverified</div><div class="guardian-verification-bottom">Last login: 11/01/2021</div></td>
+                      <td class="align-middle"><div class="accuracy-top">25%</div><div class="accuracy-bottom">Match</div></td>
+                      <td class="align-middle"><div class="d-flex justify-content-between"><div class="report-view-more">View More</div><span class="vertical feather-24" data-feather="more-vertical"></span></div> </td>
+                    </tr>
+  
+                    <tr class="report-box">
+                      <th class="align-middle justify-content-start" scope="row"><div class="report-checked"></div> <input class="report-checkbox" type="checkbox"></th>
+                      <td class="align-middle"><div class="missions-top">Basic hand gestures</div><div class="missions-bottom">Hello</div></td>
+                      <td class="align-middle"><div class="user-status-top"><i class="fa fa-circle"></i> Completed</div><div class="user-status-bottom">Last practice: 27/12/2020</div></td>
+                      <td class="align-middle"><div class="guardian-verification-top"><i class="fa fa-circle"></i> Verified</div><div class="guardian-verification-bottom">Last login: 11/01/2021</div></td>
+                      <td class="align-middle"><div class="accuracy-top">25%</div><div class="accuracy-bottom">Match</div></td>
+                      <td class="align-middle"><div class="d-flex justify-content-between"><div class="report-view-more">View More</div><span class="vertical feather-24" data-feather="more-vertical"></span></div> </td>
+                    </tr>
+                    <tr class="report-box">
+                      <th class="align-middle justify-content-start" scope="row"><div class="report-checked"></div> <input class="report-checkbox" type="checkbox"></th>
+                      <td class="align-middle"><div class="missions-top">Basic hand gestures</div><div class="missions-bottom">Thumbs Down</div></td>
+                      <td class="align-middle"><div class="user-status-top"><i class="fa fa-circle"></i> Unfinished</div><div class="user-status-bottom">Last practice: 27/12/2020</div></td>
+                      <td class="align-middle"><div class="guardian-verification-top"><i class="fa fa-circle"></i> Unverified</div><div class="guardian-verification-bottom">Last login: 11/01/2021</div></td>
+                      <td class="align-middle"><div class="accuracy-top">25%</div><div class="accuracy-bottom">Match</div></td>
+                      <td class="align-middle"><div class="d-flex justify-content-between"><div class="report-view-more">View More</div><span class="vertical feather-24" data-feather="more-vertical"></span></div> </td>
+                    </tr>
+  
+                    <tr class="report-box">
+                      <th class="align-middle justify-content-start" scope="row"><div class="report-checked"></div> <input class="report-checkbox" type="checkbox"></th>
+                      <td class="align-middle"><div class="missions-top">Basic hand gestures</div><div class="missions-bottom">Hello</div></td>
+                      <td class="align-middle"><div class="user-status-top"><i class="fa fa-circle"></i> Completed</div><div class="user-status-bottom">Last practice: 27/12/2020</div></td>
+                      <td class="align-middle"><div class="guardian-verification-top"><i class="fa fa-circle"></i> Verified</div><div class="guardian-verification-bottom">Last login: 11/01/2021</div></td>
+                      <td class="align-middle"><div class="accuracy-top">25%</div><div class="accuracy-bottom">Match</div></td>
+                      <td class="align-middle"><div class="d-flex justify-content-between"><div class="report-view-more">View More</div><span class="vertical feather-24" data-feather="more-vertical"></span></div> </td>
+                    </tr>
+                    <tr class="report-box">
+                      <th class="align-middle justify-content-start" scope="row"><div class="report-checked"></div> <input class="report-checkbox" type="checkbox"></th>
+                      <td class="align-middle"><div class="missions-top">Basic hand gestures</div><div class="missions-bottom">Thumbs Down</div></td>
+                      <td class="align-middle"><div class="user-status-top"><i class="fa fa-circle"></i> Unfinished</div><div class="user-status-bottom">Last practice: 27/12/2020</div></td>
+                      <td class="align-middle"><div class="guardian-verification-top"><i class="fa fa-circle"></i> Unverified</div><div class="guardian-verification-bottom">Last login: 11/01/2021</div></td>
+                      <td class="align-middle"><div class="accuracy-top">25%</div><div class="accuracy-bottom">Match</div></td>
+                      <td class="align-middle"><div class="d-flex justify-content-between"><div class="report-view-more">View More</div><span class="vertical feather-24" data-feather="more-vertical"></span></div> </td>
+                    </tr>
+  
+                    <tr class="report-box">
+                      <th class="align-middle justify-content-start" scope="row"><div class="report-checked"></div> <input class="report-checkbox" type="checkbox"></th>
+                      <td class="align-middle"><div class="missions-top">Basic hand gestures</div><div class="missions-bottom">Hello</div></td>
+                      <td class="align-middle"><div class="user-status-top"><i class="fa fa-circle"></i> Completed</div><div class="user-status-bottom">Last practice: 27/12/2020</div></td>
+                      <td class="align-middle"><div class="guardian-verification-top"><i class="fa fa-circle"></i> Verified</div><div class="guardian-verification-bottom">Last login: 11/01/2021</div></td>
+                      <td class="align-middle"><div class="accuracy-top">25%</div><div class="accuracy-bottom">Match</div></td>
+                      <td class="align-middle"><div class="d-flex justify-content-between"><div class="report-view-more">View More</div><span class="vertical feather-24" data-feather="more-vertical"></span></div> </td>
+                    </tr>
+                    <tr class="report-box">
+                      <th class="align-middle justify-content-start" scope="row"><div class="report-checked"></div> <input class="report-checkbox" type="checkbox"></th>
+                      <td class="align-middle"><div class="missions-top">Basic hand gestures</div><div class="missions-bottom">Thumbs Down</div></td>
+                      <td class="align-middle"><div class="user-status-top"><i class="fa fa-circle"></i> Unfinished</div><div class="user-status-bottom">Last practice: 27/12/2020</div></td>
+                      <td class="align-middle"><div class="guardian-verification-top"><i class="fa fa-circle"></i> Unverified</div><div class="guardian-verification-bottom">Last login: 11/01/2021</div></td>
+                      <td class="align-middle"><div class="accuracy-top">25%</div><div class="accuracy-bottom">Match</div></td>
+                      <td class="align-middle"><div class="d-flex justify-content-between"><div class="report-view-more">View More</div><span class="vertical feather-24" data-feather="more-vertical"></span></div> </td>
+                    </tr>
+
+                    <tr class="report-box">
+                      <th class="align-middle justify-content-start" scope="row"><div class="report-checked"></div> <input class="report-checkbox" type="checkbox"></th>
+                      <td class="align-middle"><div class="missions-top">Basic hand gestures</div><div class="missions-bottom">Thumbs Down</div></td>
+                      <td class="align-middle"><div class="user-status-top"><i class="fa fa-circle"></i> Unfinished</div><div class="user-status-bottom">Last practice: 27/12/2020</div></td>
+                      <td class="align-middle"><div class="guardian-verification-top"><i class="fa fa-circle"></i> Unverified</div><div class="guardian-verification-bottom">Last login: 11/01/2021</div></td>
+                      <td class="align-middle"><div class="accuracy-top">25%</div><div class="accuracy-bottom">Match</div></td>
+                      <td class="align-middle"><div class="d-flex justify-content-between"><div class="report-view-more">View More</div><span class="vertical feather-24" data-feather="more-vertical"></span></div> </td>
+                    </tr>
+  
+                    <tr class="report-box">
+                      <th class="align-middle justify-content-start" scope="row"><div class="report-checked"></div> <input class="report-checkbox" type="checkbox"></th>
+                      <td class="align-middle"><div class="missions-top">Basic hand gestures</div><div class="missions-bottom">Hello</div></td>
+                      <td class="align-middle"><div class="user-status-top"><i class="fa fa-circle"></i> Completed</div><div class="user-status-bottom">Last practice: 27/12/2020</div></td>
+                      <td class="align-middle"><div class="guardian-verification-top"><i class="fa fa-circle"></i> Verified</div><div class="guardian-verification-bottom">Last login: 11/01/2021</div></td>
+                      <td class="align-middle"><div class="accuracy-top">25%</div><div class="accuracy-bottom">Match</div></td>
+                      <td class="align-middle"><div class="d-flex justify-content-between"><div class="report-view-more">View More</div><span class="vertical feather-24" data-feather="more-vertical"></span></div> </td>
+                    </tr>
+                    <tr class="report-box">
+                      <th class="align-middle justify-content-start" scope="row"><div class="report-checked"></div> <input class="report-checkbox" type="checkbox"></th>
+                      <td class="align-middle"><div class="missions-top">Basic hand gestures</div><div class="missions-bottom">Thumbs Down</div></td>
+                      <td class="align-middle"><div class="user-status-top"><i class="fa fa-circle"></i> Unfinished</div><div class="user-status-bottom">Last practice: 27/12/2020</div></td>
+                      <td class="align-middle"><div class="guardian-verification-top"><i class="fa fa-circle"></i> Unverified</div><div class="guardian-verification-bottom">Last login: 11/01/2021</div></td>
+                      <td class="align-middle"><div class="accuracy-top">25%</div><div class="accuracy-bottom">Match</div></td>
+                      <td class="align-middle"><div class="d-flex justify-content-between"><div class="report-view-more">View More</div><span class="vertical feather-24" data-feather="more-vertical"></span></div> </td>
+                    </tr>
+  
+                    <tr class="report-box">
+                      <th class="align-middle justify-content-start" scope="row"><div class="report-checked"></div> <input class="report-checkbox" type="checkbox"></th>
+                      <td class="align-middle"><div class="missions-top">Basic hand gestures</div><div class="missions-bottom">Hello</div></td>
+                      <td class="align-middle"><div class="user-status-top"><i class="fa fa-circle"></i> Completed</div><div class="user-status-bottom">Last practice: 27/12/2020</div></td>
+                      <td class="align-middle"><div class="guardian-verification-top"><i class="fa fa-circle"></i> Verified</div><div class="guardian-verification-bottom">Last login: 11/01/2021</div></td>
+                      <td class="align-middle"><div class="accuracy-top">25%</div><div class="accuracy-bottom">Match</div></td>
+                      <td class="align-middle"><div class="d-flex justify-content-between"><div class="report-view-more">View More</div><span class="vertical feather-24" data-feather="more-vertical"></span></div> </td>
+                    </tr>
+                    <tr class="report-box">
+                      <th class="align-middle justify-content-start" scope="row"><div class="report-checked"></div> <input class="report-checkbox" type="checkbox"></th>
+                      <td class="align-middle"><div class="missions-top">Basic hand gestures</div><div class="missions-bottom">Thumbs Down</div></td>
+                      <td class="align-middle"><div class="user-status-top"><i class="fa fa-circle"></i> Unfinished</div><div class="user-status-bottom">Last practice: 27/12/2020</div></td>
+                      <td class="align-middle"><div class="guardian-verification-top"><i class="fa fa-circle"></i> Unverified</div><div class="guardian-verification-bottom">Last login: 11/01/2021</div></td>
+                      <td class="align-middle"><div class="accuracy-top">25%</div><div class="accuracy-bottom">Match</div></td>
+                      <td class="align-middle"><div class="d-flex justify-content-between"><div class="report-view-more">View More</div><span class="vertical feather-24" data-feather="more-vertical"></span></div> </td>
+                    </tr>
+  
+                    <tr class="report-box">
+                      <th class="align-middle justify-content-start" scope="row"><div class="report-checked"></div> <input class="report-checkbox" type="checkbox"></th>
+                      <td class="align-middle"><div class="missions-top">Basic hand gestures</div><div class="missions-bottom">Hello</div></td>
+                      <td class="align-middle"><div class="user-status-top"><i class="fa fa-circle"></i> Completed</div><div class="user-status-bottom">Last practice: 27/12/2020</div></td>
+                      <td class="align-middle"><div class="guardian-verification-top"><i class="fa fa-circle"></i> Verified</div><div class="guardian-verification-bottom">Last login: 11/01/2021</div></td>
+                      <td class="align-middle"><div class="accuracy-top">25%</div><div class="accuracy-bottom">Match</div></td>
+                      <td class="align-middle"><div class="d-flex justify-content-between"><div class="report-view-more">View More</div><span class="vertical feather-24" data-feather="more-vertical"></span></div> </td>
+                    </tr>
+                    <tr class="report-box">
+                      <th class="align-middle justify-content-start" scope="row"><div class="report-checked"></div> <input class="report-checkbox" type="checkbox"></th>
+                      <td class="align-middle"><div class="missions-top">Basic hand gestures</div><div class="missions-bottom">Thumbs Down</div></td>
+                      <td class="align-middle"><div class="user-status-top"><i class="fa fa-circle"></i> Unfinished</div><div class="user-status-bottom">Last practice: 27/12/2020</div></td>
+                      <td class="align-middle"><div class="guardian-verification-top"><i class="fa fa-circle"></i> Unverified</div><div class="guardian-verification-bottom">Last login: 11/01/2021</div></td>
+                      <td class="align-middle"><div class="accuracy-top">25%</div><div class="accuracy-bottom">Match</div></td>
+                      <td class="align-middle"><div class="d-flex justify-content-between"><div class="report-view-more">View More</div><span class="vertical feather-24" data-feather="more-vertical"></span></div> </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="reports-page">
+                Rows per page: 
+                <div class="dropdown">
+                  <span class="btn dropdown-toggle" id="reportsCountDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    5
+                  </span>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item reportsCountDropdown">5</a></li>
+                    <li><a class="dropdown-item reportsCountDropdown">10</a></li>
+                    <li><a class="dropdown-item reportsCountDropdown">25</a></li>
+                  </ul>
+                  </div>
+                <div class="reports-page-summary"></div>
+                <div id="reports-left"><span class="chevron-left feather-24" data-feather="chevron-left"></span></div>
+                <div role="button" id="reports-right"><span class="chevron-right feather-24" data-feather="chevron-right"></span></div>
+              </div>
+              </div>
+            </div>
+          </div> 
+          <div class="row">
+            <div class="col-3">
+              <div class="tab tab-notification">
+                <div class="notifications-headline d-flex justify-content-between">
+                  NOTIFICATIONS<span class="vertical feather-24" data-feather="more-vertical"></span>
+                </div>
+                <hr class="below-headline">
+                <div class="notifications-list">
+                  <div class="notification-box">
+                    <div class="notification-box-top d-flex justify-content-between"><div class="notification-user">Guardian</div><div class="notification-date">3 days ago</div></div>
+                    <div class="notification-box-bottom">Verified Basic hand gestures</div>
+                    <hr>
+                  </div>
+                  <div class="notification-box">
+                    <div class="notification-box-top d-flex justify-content-between"><div class="notification-user">Asif</div><div class="notification-date">24 days ago</div></div>
+                    <div class="notification-box-bottom">Verified advanced hand gestures</div>
+                    <hr>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-9 d-flex justify-content-between">
+              <div class="tab tab-statistics">
+                <div class="statistics-headline d-flex justify-content-between">
+                  STATISTICS<span class="vertical feather-24" data-feather="more-vertical"></span>
+                </div>
+                <hr class="below-headline">
+                <div class="container statistics">
+                  <div class="row">
+                    <div class="col-6 statistics">
+                      <div class="statistics-box">
+                        <div class="statistics-topic d-flex justify-content-between">Eye Contact<span class="feather-24" data-feather="eye"></span></div> 
+                        <div class="statistics-results d-flex justify-content-between">
+                        <div class="statistics-percentage">12% ▲</div>
+                        <div class="statistics-ave"><div class="top">86 Sec</div> <div class="bottom">Ave.</div></div> 
+                      </div>
+                      </div>
+                      </div>
+                    <div class="col-6 statistics">
+                      <div class="statistics-box">
+                        <div class="statistics-topic d-flex justify-content-between">Continuity<span class="feather-24" data-feather="refresh-cw"></span></div> 
+                        <div class="statistics-results d-flex justify-content-between">
+                        <div class="statistics-percentage">52% ▲</div>
+                        <div class="statistics-ave"><div class="top">5 Times</div> <div class="bottom">Ave.</div></div> 
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-6 statistics">
+                        <div class="statistics-box">
+                          <div class="statistics-topic d-flex justify-content-between">Verbal Responses<span class="feather-24" data-feather="user-check"></span></div> 
+                          <div class="statistics-results d-flex justify-content-between">
+                          <div class="statistics-percentage">25% ▲</div>
+                          <div class="statistics-ave"><div class="top">8 Times</div> <div class="bottom">Ave.</div></div> 
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 statistics">
+                      <div class="statistics-box">
+                        <div class="statistics-topic d-flex justify-content-between">Responsiveness<span class="feather-24" data-feather="watch"></span></div> 
+                          <div class="statistics-results d-flex justify-content-between">
+                          <div class="statistics-percentage">8% ▲</div>
+                          <div class="statistics-ave"><div class="top">2.5 Sec</div> <div class="bottom">Ave.</div></div> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-6 statistics">
+                      <div class="statistics-box">
+                        <div class="statistics-topic d-flex justify-content-between">Posture Change<span class="feather-24" data-feather="repeat"></span></div> 
+                          <div class="statistics-results d-flex justify-content-between">
+                          <div class="statistics-percentage">5% ▼</div>
+                          <div class="statistics-ave"><div class="top">12 Times</div> <div class="bottom">Ave.</div></div> 
+                      </div>
+                      </div>
+                    </div>
+                    <div class="col-6 statistics">
+                      <div class="statistics-box">
+                        <div class="statistics-topic d-flex justify-content-between">Practice Time<span class="feather-24" data-feather="clock"></span></div> 
+                          <div class="statistics-results d-flex justify-content-between">
+                          <div class="statistics-percentage">88% ▼</div>
+                          <div class="statistics-ave"><div class="top">25 Min</div> <div class="bottom">Day SAve.</div></div> 
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="tab tab-user-analysis">
+                <div class="notifications-headline d-flex justify-content-between">
+                  USER ANALYSIS<span class="vertical feather-24" data-feather="more-vertical"></span>
+                </div>
+                <hr class="below-headline">
+              </div>
+            </div>
+          </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
+  
+    </body>
+</html>
